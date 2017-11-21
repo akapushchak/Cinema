@@ -1,0 +1,20 @@
+
+<databaseChangeLog xmlns = "http://www.liquibase.org/xml/ns/dbchangelog/1.9" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+<changeSet id="1" author="anna.kapushchak@gmail.com" runOnChange="true" >
+    <createTable tableName ="films">
+        <column autoIncrement = "true" name = "filmsId" type ="BIGINT">
+            <constraints nullable="false" primaryKey="true"></constraints>
+        </column>
+        <column name="name" type="CHARACTER(255)">
+        <constraints nullable="false"></constraints>
+    </column>
+        <column name="genre" type="CHARACTER(64)">
+            <constraints nullable="false"></constraints>
+        </column>
+        <column name="duration" type="INTEGER">
+            <constraints nullable="false"></constraints>
+        </column>
+    </createTable>
+</changeSet>
+</databaseChangeLog>
